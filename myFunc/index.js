@@ -4,13 +4,13 @@ module.exports = async function (context, req) {
     if (req.query.name || (req.body && req.body.name)) {
         context.res = {
             // status: 200, /* Defaults to 200 */
-            body: "Hello You Stinkin' waste of " + (req.query.name || req.body.name)
+            body: "I am lost " + (req.query.name || req.body.name)
         };
     }
     else {
         context.res = {
             status: 400,
-            body: "Please pass a derogatory name on the query string or in the request body"
+            body: "Still Lost"
         };
     }
 };
